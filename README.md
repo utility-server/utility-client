@@ -1,9 +1,10 @@
 # utility-client
 
 1. First, download the .deb package from GitHub using wget:
+##
 $ wget https://github.com/utility-server/utility-client/raw/main/UtilityClient-Debin-amc64-3.02.deb
 
-2. Then, install the downloaded package using dpkg:
+3. Then, install the downloaded package using dpkg:
 $ sudo dpkg -i UtilityClient-Debin-amc64-3.02.deb
 
 If there are any dependencies missing, you may need to install them manually using apt-get install -f:
