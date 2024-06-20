@@ -13,13 +13,13 @@ This guide provides a comprehensive overview of using Utility Client. It covers 
 1. **Download Utility Client:**
 
    ```bash
-   $ wget https://github.com/utility-server/utility-client/raw/main/UtilityClient-Debin-amc64-3.02.deb
+   $ wget https://github.com/utility-server/utility-client/raw/main/UtilityClient-Debin-amd64-3.02.deb
    ```
 
 2. **Install Utility Client:**
 
    ```bash
-   $ sudo dpkg -i UtilityClient-Debin-amc64-3.02.deb
+   $ sudo dpkg -i UtilityClient-Debin-amd64-3.02.deb
    ```
 
 ## Configuring Utility Client
@@ -57,7 +57,7 @@ Follow the steps mentioned in "Configuring Utility Client" for each client. Each
 Use the following command to review the loaded configuration:
 
 ```bash
-$ utility-client -printConfiguration
+$ utility-client -printConfig
 ```
 
 This command displays the activated client configuration stored locally.
@@ -143,7 +143,137 @@ Whitelist static IP addresses of the machines running TTSCC and your web server.
 Use the following command to view stats like credit quota, number of renders, requests served from cache, and more:
 
 ```bash
-$ utility-client -getStats=<month>
+$ utility-client -getStats=<MONTH>
 ```
 
-Replace `<month>` with the desired
+Replace `<MONTH>` with the desired month (e.g., `January`).
+
+## User Account Management
+
+**Activating an Account:**
+
+```bash
+$ utility-client -activateAccount
+```
+
+Follow the prompts to activate an account using the registered email ID.
+
+**Logging In and Out:**
+
+```bash
+# Log in
+$ utility-client -login
+
+# Log out
+$ utility-client -logout
+```
+
+**Requesting Password Reset:**
+
+```bash
+$ utility-client -resetPassword
+```
+
+Follow the prompts to request a password reset via the registered email ID.
+
+## Client Onboarding
+
+**Initiating Client Onboarding:**
+
+```bash
+$ utility-client -onboardClient
+```
+
+Follow the prompts to initiate the onboarding process for a new client.
+
+## Downloading and Monitoring Logs
+
+**Downloading Log Reports:**
+
+```bash
+$ utility-client -downloadLogReport
+```
+
+**Fetching Live Logs:**
+
+```bash
+$ utility-client -fetchLiveLogs
+```
+
+## Updating and Managing Keys
+
+**Pushing Access and Secret Keys:**
+
+```bash
+# Push a new access key
+$ utility-client -pushAccessKey
+
+# Push a new secret key
+$ utility-client -pushSecretKey
+```
+
+**Rotating Access and Secret Keys:**
+
+```bash
+# Rotate the access key
+$ utility-client -rotateAccessKey
+
+# Rotate the secret key
+$ utility-client -rotateSecretKey
+```
+
+## Validating Transactions
+
+**Validating a Transaction:**
+
+```bash
+$ utility-client -validateTxn=<transaction>
+```
+
+Replace `<transaction>` with the specific transaction to validate.
+
+## Viewing Available Plans
+
+**Showing Available Plans:**
+
+```bash
+$ utility-client -showPlans
+```
+
+## Updating Utility Client
+
+**Updating to the Latest Version:**
+
+```bash
+$ utility-client -update
+```
+
+## Session Management
+
+**Terminating Active Sessions:**
+
+```bash
+$ utility-client -terminateSession
+```
+
+## Viewing User Information
+
+**Displaying Logged-In User:**
+
+```bash
+$ utility-client -whoami
+```
+
+**Displaying Utility Client Version:**
+
+```bash
+$ utility-client -ver
+```
+
+## Help
+
+**Showing Detailed Usage Information:**
+
+```bash
+$ utility-client -help
+```
