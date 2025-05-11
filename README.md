@@ -25,7 +25,7 @@
 ### On Linux (Ubuntu/Debian-based)
 
 ```bash
-$ wget https://github.com/utility-server/utility-client/raw/main/UtilityClient-Debin-amd64-3.02.deb
+$ wget https://github.com/utility-server/utility-client/raw/main/UtilityClient-Debin-amd64-latest.deb
 $ sudo dpkg -i UtilityClient-Debin-amd64-latest.deb
 ```
 
