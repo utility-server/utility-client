@@ -2,6 +2,8 @@
 
 **Utility Client** is a versatile command-line tool designed to manage Utility Server's operations, including configuration management, client onboarding, caching, logging, and system monitoring. It supports both standard CLI and an interactive shell mode.
 
+### Wiki -> https://github.com/utility-server/utility-client/wiki
+
 ---
 
 ## Table of Contents
